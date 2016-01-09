@@ -133,8 +133,9 @@ img {
 
 }
 
-.block > span {
+div span {
 	font-family: donchi;
+	color: #00C3FC;
 }
 
 .black {
