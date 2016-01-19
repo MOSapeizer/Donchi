@@ -1,0 +1,172 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: Merriweather-Light, Georgia, serif;
+	font-size: 18px;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;
+  margin: auto;
+}
+
+header {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	height: 60px;
+	background-color: black;
+	vertical-align: center;
+}
+
+.login {
+	position: relative;
+	top: 15px;
+	right: 3%;
+	width: 70px;
+	height: 34px;
+	/*background-color: white;
+    box-shadow: 2px 2px 0px #666;*/
+    text-align: center;
+    border-radius: 4px;
+}
+
+.button	 {
+	padding: 1px;
+}
+
+.login a{
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	color: white;
+	text-decoration: none;
+}
+
+.slide {
+	overflow: hidden;
+	max-height: 450px;
+	height: 30%;
+}
+
+.slide img {
+	height: 100%;
+}
+
+.slogan {
+	position: absolute;
+	top: 140px;
+	left: 50%;
+	margin-left: -180px;
+	text-align: center;
+	color: white;
+	z-index: 3;
+	text-shadow: 1px 1px black;
+}
+
+.search-box {
+	background-color: white;
+	position: absolute;
+	margin-left: -225px;
+	left: 50%;
+	top: 250px;
+	width: 450px;
+	height: 40px;
+	border-radius: 3px;
+	z-index: 3;
+}
+
+.search-box input {
+	position: relative;
+	border: none;
+	outline: none;
+	top: 8px;
+	left: 18px;
+	margin-left: 0;
+	width: 90%;
+	/*font-size: 18px;*/
+}
+
+.subtitle {
+	text-align: center;
+	padding: 15px 0;
+}
+
+.mask {
+	width: 100%;
+	height: 400px;
+	position: absolute;
+	background-color: rgba(0, 0, 0 ,0.2);
+	z-index: 2;
+}
+
+.picture_box {
+	height: 400px;
+}
+
+.caroushow {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	width: 100%;
+	margin: auto;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    .block > div:nth-child(7) {
+    	display: none;
+	}
+
+	.block > div:nth-child(8) {
+		display: none;
+	}
+
+}
+
+div span {
+	font-family: donchi;
+	color: #00C3FC;
+}
+
+div span.teacher {
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.5);
+	display: block;
+}
+
+.black {
+	float: left;
+	/*border: 1px dotted black;*/
+	background-color: white;
+	max-width: 250px;
+	min-height: 230px;
+	overflow: hidden;
+}
+
+.black img {
+	height: 144px;
+}
+
+footer {
+	padding: 15px;
+	width: 100%;
+	height: 80px;
+	background-color: black;
+	color: white;
+	text-align: center;
+}
