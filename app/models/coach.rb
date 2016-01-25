@@ -1,2 +1,3 @@
-class Coach < User
+class Coach  < User
+
 end
