@@ -15,4 +15,14 @@
 //= require turbolinks
 //= require_tree .
 
+$(function() {
+	$(".login a:contains('sign in')").click(function(){
+		$(".login-form").css("display", "block");
+		// $(".login-from input[type='submit']").click(function() {
+		// 	$(".login-form").css("display", "none");
+		// });
+	});
 
+	$(".popup").fadeIn("slow");
+	$(".popup").fadeOut(1500);
+});

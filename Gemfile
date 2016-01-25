@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 
 gem 'coffee-script-source', '1.8.0'
+gem 'devise', '~> 3.4', '>= 3.4.1'
 
 gem 'bootstrap-sass'
 # Use Uglifier as compressor for JavaScript assets

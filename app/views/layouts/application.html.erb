@@ -13,12 +13,32 @@
 
 	<header>
 		<div class="login pull-right">
-			<a href="#">sign in</a>
+			<% unless user_signed_in? %>
+				<%= link_to "sign in", '#' %>
+			<% else %>
+				<%= link_to "sign out", destroy_user_session_path, method: :delete %>
+			<% end %>
+			
+		</div>
+
+		<div class="popup">
+			<% if notice %>
+			  <p class="alert alert-success"><%= notice %></p>
+			<% end %>
+			<% if alert %>
+			  <p class="alert alert-danger"><%= alert %></p>
+			<% end %>
 		</div>
 	</header>
 
+	<div class="login-form" container>
+		<h2>Member Login</h2>
+		<%= render "devise/sessions/new" %>
+	</div>
+
 	<%= yield %>
-	
+
+
 	<footer class="">
 		<span> © 2016 Coursera Inc. All rights reserved. </span>
 	</footer>
