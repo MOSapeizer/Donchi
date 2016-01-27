@@ -50,5 +50,7 @@ group :development do
   gem 'spring'
 
   gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+
+  gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
 end
 
