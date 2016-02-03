@@ -7,11 +7,11 @@
 mark:
  email: hhhhbk605089@gmail.com
  name: mark 
-
+ type: Student
 # column: value
 #
 max:
  email: hhhhbk605088@gmail.com
  name: max
-
+ type: Coach
 #  column: value
