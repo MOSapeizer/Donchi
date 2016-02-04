@@ -1,0 +1,39 @@
+// Place all the styles related to the Course controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+aside {
+	position: fixed;
+	min-width: 1px;
+}
+.main {
+	width: 100%;
+
+}
+
+.course-picture {
+	text-align: center;
+	h1 {
+
+	}
+}
+
+.coach {
+	float: left;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background-color: black;
+	text-align: center;
+	overflow: hidden;
+	margin: 2em 2em;
+	span {
+		display: relative;
+	}
+	img {
+		width: auto;
+		height: 100%;
+		transform: translate(-15%, 5%);
+	}
+}
