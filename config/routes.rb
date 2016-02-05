@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   # resources 'home'
 
   get 'test' => 'home#test'
+
+  resources :course
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
