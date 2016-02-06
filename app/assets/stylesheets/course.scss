@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "centre";
+
+$block-margin-bottom: 4em;
 
 aside {
 	position: fixed;
@@ -19,15 +22,18 @@ aside {
 	}
 }
 
+.team-info {
+	display: flex;
+}
+
 .coach {
-	float: left;
 	width: 150px;
 	height: 150px;
 	border-radius: 50%;
 	background-color: black;
 	text-align: center;
 	overflow: hidden;
-	margin: 2em 2em;
+	margin: 2em auto;
 	span {
 		display: relative;
 	}
@@ -35,6 +41,11 @@ aside {
 		width: auto;
 		height: 100%;
 		transform: translate(-15%, 5%);
+	}
+	&:after {
+		content: "";
+		width: 100%;
+		display: inline-block;
 	}
 }
 
@@ -53,5 +64,21 @@ aside {
 			background-color: lightgray;
 		}
 	}
+	margin-left: 0;
 	margin-bottom: 10%;
 }
+
+.enroll {
+	width: 50em;
+	padding: 0.75em;
+	margin: auto;
+	margin-bottom: $block-margin-bottom;
+	background-color: #FF4963;
+	text-align: center;
+	span {
+		color: white;
+	}
+}
+
+
+
