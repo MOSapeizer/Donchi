@@ -15,7 +15,7 @@ aside {
 .course-picture {
 	text-align: center;
 	h1 {
-		
+
 	}
 }
 
@@ -36,4 +36,22 @@ aside {
 		height: 100%;
 		transform: translate(-15%, 5%);
 	}
+}
+
+.list {
+	.lesson {
+		width: 100%;
+		padding: 2em;
+		.status {
+			text-align: center;
+			height: 100%;
+		}
+		&:nth-child(odd) {
+			background-color: gray;
+		}
+		&:nth-child(even) {
+			background-color: lightgray;
+		}
+	}
+	margin-bottom: 10%;
 }
