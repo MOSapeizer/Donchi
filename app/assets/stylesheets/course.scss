@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "centre";
+
+$block-margin-bottom: 4em;
+
 
 aside {
 	position: fixed;
@@ -15,19 +19,22 @@ aside {
 .course-picture {
 	text-align: center;
 	h1 {
-		
+
 	}
 }
 
+.team-info {
+	display: flex;
+}
+
 .coach {
-	float: left;
 	width: 150px;
 	height: 150px;
 	border-radius: 50%;
 	background-color: black;
 	text-align: center;
 	overflow: hidden;
-	margin: 2em 2em;
+	margin: 2em auto;
 	span {
 		display: relative;
 	}
@@ -36,4 +43,51 @@ aside {
 		height: 100%;
 		transform: translate(-15%, 5%);
 	}
+	&:after {
+		content: "";
+		width: 100%;
+		display: inline-block;
+	}
 }
+
+.list {
+	.lesson {
+		width: 100%;
+		padding: 2em;
+		.status {
+			text-align: center;
+			height: 100%;
+		}
+		&:nth-child(odd) {
+			background-color: gray;
+		}
+		&:nth-child(even) {
+			background-color: lightgray;
+		}
+		a {
+			position: absolute;
+			display: block;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+	}
+	margin-left: 0;
+	margin-bottom: 10%;
+}
+
+.enroll {
+	width: 50em;
+	padding: 0.75em;
+	margin: auto;
+	margin-bottom: $block-margin-bottom;
+	background-color: #FF4963;
+	text-align: center;
+	span {
+		color: white;
+	}
+}
+
+
+
