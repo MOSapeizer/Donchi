@@ -4,6 +4,11 @@ class CourseController < ApplicationController
 	end
 
 	def show
-		# @course = Course.find(param[:id])
+		@course = Course.find(params[:id])
+		
+	end
+
+	def create
+		
 	end
 end

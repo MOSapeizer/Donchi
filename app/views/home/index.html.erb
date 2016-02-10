@@ -2,11 +2,10 @@
 
 	<ul>
 		<% @courses.each do |course| %>
-	  
-	 	  	<%= course.title %>
-	 
+	  		<%= link_to course.title, course_path(course) %>
 		<% end %>
 	</ul>
+
 
 	<div class="slogan">
 		<h2> 口袋裡的健身教練與營養師 </h2>

@@ -3,7 +3,7 @@ class HomeController < ApplicationController
 	def index
 		#load first 8 courses from course model
 		@courses = Course.first(8)
-
+		
 	end
 
 	def test

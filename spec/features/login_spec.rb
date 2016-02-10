@@ -16,7 +16,7 @@ RSpec.describe "home page", type: :request do
 	end
 
 	it "show sign in if user have not sign in" do
-
+		
 	end	
 
 
