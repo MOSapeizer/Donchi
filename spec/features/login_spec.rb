@@ -21,10 +21,11 @@ RSpec.describe "home page", type: :request do
 
 
 	it "show first 8 courses in 熱門課程 from model course"do
-		Course.create!(title: "swim")
+		#Course.create!(title: "swim")
 		visit '/'
-		course1 = Course.find_by_title("swim")
-		expect(course1.title).to eq "swim"
+		Course.first(8)
+		
+	
 	end
 
 	it "User click any one of 熱門課程 , redirect to course page"do
