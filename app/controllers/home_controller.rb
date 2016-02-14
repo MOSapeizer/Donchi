@@ -3,7 +3,10 @@ class HomeController < ApplicationController
 	def index
 		#load first 8 courses from course model
 		@courses = Course.first(8)
-		
+		unless user_signed_in?  
+			#	@usrname = current_user.name
+		    redirect_to new_user_session_path
+		end	
 	end
 
 	def test

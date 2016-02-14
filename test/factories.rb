@@ -7,5 +7,10 @@ FactoryGirl.define do
     numofstudent 5  
   end
   
+   factory :user do
+   	name 		"max"
+    email       "user@example.com"
+    password    "foobar1234"
+  end
 
 end
