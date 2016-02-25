@@ -1,16 +1,43 @@
 # This will guess the User class
 FactoryGirl.define do
   factory :course do
-    sequence :title do |n|
-    "swim#{n}"
-    end
-    numofstudent 5  
+     sequence :main_picture_source do |n|
+      "#{n}"
+      end
+      sequence :title do |n|
+      "title#{n}"
+      end
+      #name
+      #coach_id
+      numofstudent 1
+      #numoflesson 
+
+      after(:create){ |course|
+          course.users << FactoryGirl.create(:user , type:'Student')
+      }
   end
   
-   factory :user do
-   	name 		"max"
-    email       "user@example.com"
-    password    "foobar1234"
-  end
 
+
+   factory :user do
+      #type 'Student!! big s'
+     	#name 		"max"
+      sequence :name do |n|
+        "user#{n}"
+      end
+      sequence :password do |n|
+        "1212343#{n}"
+      end 
+      sequence :email do |n|
+       "user#{n}@gmail.com"
+      end
+
+      numofcourse 1
+   end
+
+
+   factory :relation_user_course do
+      association :course
+      association :user
+   end
 end
