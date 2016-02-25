@@ -1,29 +1,37 @@
 # This will guess the User class
 FactoryGirl.define do
   factory :course do
-     sequence :main_picture_source do |n|
+      #coach_id
+      #numofstudent 
+      #numoflesson 
+      sequence :name do |n|
+        "course#{n}"
+      end 
+      sequence :main_picture_source do |n|
       "#{n}"
       end
       sequence :title do |n|
       "title#{n}"
       end
-      #name
-      #coach_id
-      numofstudent 1
-      #numoflesson 
 
- 
-      after(:create){ |course|
-          2.times{course.users << FactoryGirl.create(:user , type:'Student')}
-      }
+      ignore do 
+          count 3 #use for eval input attribute
+      end
+
+      trait :with_course do
+        after(:create){ |course,eval|
+            eval.count.times{course.users << FactoryGirl.create(:user)}
+        }
+      end 
+
    
   end
   
 
 
    factory :user do
-      #type 'Student!! big s'
-     	#name 		"max"
+      type Student
+      #numofcourse 
       sequence :name do |n|
         "user#{n}"
       end
@@ -34,7 +42,16 @@ FactoryGirl.define do
        "user#{n}@gmail.com"
       end
 
-      numofcourse 1
+      ignore do
+        count 3 #use for eval input attribute
+      end
+ 
+      trait :with_user do
+          after(:create){ |user,eval|
+            eval.count.times{user.courses << FactoryGirl.create(:course)}
+          } 
+      end
+
    end
 
 
