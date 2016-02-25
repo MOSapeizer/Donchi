@@ -12,9 +12,11 @@ FactoryGirl.define do
       numofstudent 1
       #numoflesson 
 
+ 
       after(:create){ |course|
-          course.users << FactoryGirl.create(:user , type:'Student')
+          2.times{course.users << FactoryGirl.create(:user , type:'Student')}
       }
+   
   end
   
 
