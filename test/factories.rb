@@ -20,7 +20,7 @@ FactoryGirl.define do
 
       trait :with_course do
         after(:create){ |course,eval|
-            eval.count.times{course.users << FactoryGirl.create(:user)}
+            eval.count.times{course.users << FactoryGirl.create(:user,numofcourse:1)}
         }
       end 
 
@@ -48,7 +48,7 @@ FactoryGirl.define do
  
       trait :with_user do
           after(:create){ |user,eval|
-            eval.count.times{user.courses << FactoryGirl.create(:course)}
+            eval.count.times{user.courses << FactoryGirl.create(:course,numofstudent:2)}
           } 
       end
 
