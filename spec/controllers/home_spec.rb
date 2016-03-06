@@ -31,12 +31,7 @@ RSpec.describe HomeController, type: :controller do
 			end
 		end
 
-		context "factory test" do
-			it "factory test" do
-				user =  FactoryGirl.create(:user)
-				expect(user.email).to eq('user@example.com')
-			end
-		end	
+		
 	end	
 	describe "let test" do
 		#let is lazy-loading & value is cached(same) in same example
