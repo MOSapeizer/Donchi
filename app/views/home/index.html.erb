@@ -1,4 +1,12 @@
 <div class="container caroushow">
+
+	<ul>
+		<% @courses.each do |course| %>
+	  		<%= link_to course.title, course_path(course) %>
+		<% end %>
+	</ul>
+
+
 	<div class="slogan">
 		<h2> 口袋裡的健身教練與營養師 </h2>
 	</div>
@@ -11,7 +19,6 @@
 		<div class="carousel-inner" role="listbox">
 			<div class="picture_box item active">
 				<%= image_tag("nav1-big.jpg") %>
-				
 			</div>
 			<div class="item picture_box">
 				<%= image_tag("nav2-big.jpg") %>

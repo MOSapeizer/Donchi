@@ -11,7 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160122072858) do
+ActiveRecord::Schema.define(version: 20160213065937) do
+
+  create_table "courses", force: :cascade do |t|
+    t.string   "main_picture_source"
+    t.string   "title"
+    t.string   "name"
+    t.integer  "coach_id"
+    t.integer  "numoflesson"
+    t.integer  "numofstudent"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "lessons", force: :cascade do |t|
+    t.integer  "course_id"
+    t.string   "information"
+    t.string   "picture"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "relation_user_courses", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "course_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -26,9 +57,18 @@ ActiveRecord::Schema.define(version: 20160122072858) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "name"
+    t.integer  "uid"
+    t.string   "information"
+    t.integer  "numofcourse"
+    t.string   "type"
+    t.integer  "popularity"
+    t.string   "bodyfitness"
+    t.string   "calendar"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["type"], name: "index_users_on_type"
 
 end

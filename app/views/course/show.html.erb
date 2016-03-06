@@ -6,10 +6,9 @@
 
 <div class="main">
 	<div class="row course-picture">
+		
 		<%= image_tag("course_exp.png") %>
-		<div class="banner">
-			<h1>Course Title</h1>
-		</div>
+		<h2>title</h2>	
 	</div>
 	
 	<div class="container">
@@ -64,7 +63,16 @@
 
 			<div id="course_id" class="enroll">
 				<span>報名</span>
-				<a href="#"></a>
+					<a href="#"></a>
+
+
+					<% if @has.nil? %>
+						<%= link_to "i want sign in", '#' %>
+					<% else %>
+						<%= link_to "sign in success", '#' %>
+					<% end %>
+
+
 			</div>
 		</div>
 

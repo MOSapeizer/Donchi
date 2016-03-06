@@ -8,6 +8,7 @@ gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 
+gem 'coffee-script-source', '1.8.0'
 gem 'devise', '~> 3.4', '>= 3.4.1'
 
 gem 'bootstrap-sass'
@@ -39,8 +40,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem "factory_girl_rails", "~> 4.0"
   gem 'rspec-rails', '~> 3.0'
-  gem 'factory_girl_rails'
   gem 'capybara'
 end
 
@@ -50,5 +51,9 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+
+  gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
 end
 
