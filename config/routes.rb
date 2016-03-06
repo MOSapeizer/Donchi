@@ -5,13 +5,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'course#show'
-
   # resources 'home'
-
-  get 'test' => 'home#test'
-  get 'sign_in' => 'course#sign_in'
-
-
+  get '/course/:title/sign_in' => 'course#sign_in'
   resources :course
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
