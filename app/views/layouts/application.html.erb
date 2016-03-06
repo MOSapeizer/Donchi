@@ -13,11 +13,8 @@
 
 	<header>
 		<div class="login pull-right">
-			<% unless user_signed_in? %>
-				<%= link_to "sign in", '#' %>
-			<% else %>
-				<%= link_to "sign out", destroy_user_session_path, method: :delete %>
-			<% end %>
+
+
 			
 		</div>
 
