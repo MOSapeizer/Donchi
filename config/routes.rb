@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # resources 'home'
 
   get 'test' => 'home#test'
-  get 'sign_in' => 'course#sign_in'
+  get 'sign_up_course' => 'course#sign_up_course'
 
 
   resources :course

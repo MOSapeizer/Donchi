@@ -66,8 +66,8 @@
 					<a href="#"></a>
 
 
-					<% if @has.nil? %>
-						<%= link_to "i want sign in", sign_in_path %>
+					<% if @is_attend.nil? %>
+						<%= link_to "i want sign in", sign_up_course_path %>
 					<% else %>
 						<%= link_to "sign out", destroy_user_session_path, method: :delete %>
 					<% end %>
