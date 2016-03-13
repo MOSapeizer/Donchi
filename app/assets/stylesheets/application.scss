@@ -1,0 +1,326 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "centre";
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: Merriweather-Light, Georgia, serif;
+	font-size: 18px;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;
+  margin: auto;
+}
+
+header {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	height: 60px;
+	background-color: rgba(0, 0, 0, 0.8);
+	vertical-align: center;
+}
+
+.login {
+	position: relative;
+	top: 15px;
+	right: 3%;
+	width: 7em;
+	height: 34px;
+	/*background-color: white;
+    box-shadow: 2px 2px 0px #666;*/
+    text-align: center;
+    border-radius: 4px;
+}
+
+.button	 {
+	padding: 1px;
+}
+
+.login a{
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	color: white;
+	text-decoration: none;
+}
+
+.slide {
+	overflow: hidden;
+	max-height: 450px;
+	height: 30%;
+}
+
+.slide img {
+	height: 100%;
+}
+
+.slogan {
+	position: absolute;
+	top: 140px;
+	left: 50%;
+	margin-left: -180px;
+	text-align: center;
+	color: white;
+	z-index: 3;
+	text-shadow: 1px 1px black;
+}
+
+.search-box {
+	background-color: white;
+	position: absolute;
+	margin-left: -225px;
+	left: 50%;
+	top: 250px;
+	width: 450px;
+	height: 40px;
+	border-radius: 3px;
+	z-index: 3;
+}
+
+.search-box input {
+	position: relative;
+	border: none;
+	outline: none;
+	top: 8px;
+	left: 18px;
+	margin-left: 0;
+	width: 90%;
+	/*font-size: 18px;*/
+}
+
+.subtitle {
+	text-align: center;
+	padding: 15px 0;
+}
+
+.mask {
+	width: 100%;
+	height: 400px;
+	position: absolute;
+	background-color: rgba(0, 0, 0 ,0.2);
+	z-index: 2;
+}
+
+.picture_box {
+	height: 400px;
+}
+
+.caroushow {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	width: 100%;
+	margin: auto;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    .block > div:nth-child(7) {
+    	display: none;
+	}
+
+	.block > div:nth-child(8) {
+		display: none;
+	}
+
+}
+
+div span {
+	font-family: donchi;
+	color: #00C3FC;
+}
+
+div span.teacher {
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.5);
+	display: block;
+}
+
+.black {
+	float: left;
+	/*border: 1px dotted black;*/
+	background-color: white;
+	max-width: 250px;
+	min-height: 230px;
+	overflow: hidden;
+}
+
+.black img {
+	height: 144px;
+}
+
+footer {
+	padding: 15px;
+	width: 100%;
+	height: 80px;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+	text-align: center;
+	clear: both;
+}
+
+.popup {
+	@include centre(both);
+	position: fixed;
+	z-index: 4;	
+	.alert {
+		// margin-top: 0.5em;
+		padding: 0.5em;
+	}
+}
+
+// .login-form {
+// 	display: none;
+// 	width: 400px;
+
+// 	@include centre(both);
+// 	z-index: 4;
+// 	position: fixed;
+// 	box-shadow: 2px 2px 1px rgba(20%,20%,40%,0.5);
+// 	border: 1px solid white;
+// 	border-radius: 6px;
+// 	background-color: white;
+// 	font-family: 'Open Sans', sans-serif;
+// 	text-align: center;
+// 	input {
+// 		width: 80%;
+// 		margin-bottom: 1em;
+// 		padding: 0.5em;
+
+// 		&[type="email"],
+// 		&[type="password"] {
+// 			background: #D3D3D3;
+// 			color: #676767;
+// 			font-weight: 600;
+// 			border-radius: 6px;
+// 			border: 1px solid #DED6D6;
+// 		}
+// 	}
+
+// }
+
+
+.login-form {
+	font-family: sans-serif;
+	background-image: image_url("background/background_3.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	overflow: hidden;
+	@include centre(both);
+	max-width: 900px;
+	width: 70%;
+	height: 70%;
+	border-radius: 4%;
+	text-align: center;
+
+	a.login-anchor {
+		line-height: 2em;
+		// display: block;
+		color: #666666;
+		text-decoration: none;
+	}
+
+	form {
+		position: relative;
+
+		h1 {
+			color: #333333;
+			margin-top: 15%;
+			margin-bottom: 8%;
+			font-weight: 900;
+			font-family: sans-serif;
+		}
+
+		input {
+			&[type="email"],
+			&[type="password"] {
+				font-size: 20px;
+				width: 45%;
+				border-radius: 9%/100%;
+				padding: 0.5em 1em;
+				margin: 0.5em;
+			}
+			text-align: center;
+			box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+						0 0 4px rgba(0, 0, 0, 0.1) inset;
+			&:before, &:after {
+				content: "";
+				box-shadow: 0px 0px 20px rgba(0,0,0,.8);
+			}
+		}
+
+		input[type="submit"] {
+			width: 20%;
+			padding: 0.5em 0.8em;
+			margin: 1.5em auto;
+			border-radius: 20%/100%;
+			background-color: #FF9933;
+			font-size: 0.8em;
+			font-weight: 900;
+			color: white;
+		}
+		width: 100%;
+		// height: inherit;
+		text-align: center;
+		vertical-align: center;
+	}
+
+}
+
+
+.login-background {
+	background-image: image_url('background/background_2.png'); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	width: 100%;
+	height: 100%;
+
+	.icon {
+		position: absolute;
+		width: 200px;
+		height: 80px;
+	}
+	.close {
+		color: white;
+		font: 14px/100% arial, sans-serif;
+		position: absolute;
+		right: 2em;
+		text-decoration: none;
+		text-shadow: 0 1px 0 #fff;
+		top: 2.5em;
+		&:after {
+			content: '×';
+			font-size: 6em;
+		}
+	}
+}
