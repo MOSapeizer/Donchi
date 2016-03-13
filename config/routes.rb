@@ -1,17 +1,23 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, :skip => [:sessions]
+
+  as :user do
+    get 'login' => 'devise/sessions#new', :as => :new_user_session
+    post 'signUp' => 'devise/sessions#create', :as => :user_session
+    delete 'logout' => 'devise/sessions#destroy', :as => :destroy_user_session
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'course#show'
-
   # resources 'home'
 
   get 'test' => 'home#test'
   get 'sign_up_course' => 'course#sign_up_course'
 
 
+  get '/course/:title/sign_in' => 'course#sign_in'
   resources :course
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
