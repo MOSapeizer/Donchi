@@ -29,6 +29,5 @@ class CourseController < ApplicationController
 
 	def has_relation(user,course)
 		RelationUserCourse.find_by(user_id: @user.id , course_id: @course.id).nil?
-
 	end	
 end
