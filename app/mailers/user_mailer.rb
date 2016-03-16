@@ -5,10 +5,10 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.notify_comment.subject
   #
-  default :from => "foobar@example.org"
+  default :from => "hhhhbk605089@gmail.com"
   def notify_comment
     @greeting = "Hi"
-    mail(:to => "hhhhbk605089@gmail.com", :subject => "New Comment")
+    mail(:to => "hhhhbk605088@gmail.com", :subject => "New Comment")
 	#mail to: "to@example.org"
   end
 end
