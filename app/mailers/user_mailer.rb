@@ -6,9 +6,13 @@ class UserMailer < ApplicationMailer
   #   en.user_mailer.notify_comment.subject
   #
   default :from => "hhhhbk605089@gmail.com"
-  def notify_comment
-    @greeting = "Hi"
-    mail(:to => "hhhhbk605088@gmail.com", :subject => "New Comment")
-	#mail to: "to@example.org"
+  def send_email(user,course)
+    @user_email = user.email
+    @user_name =  user.name
+    @course_name = course.name
+    @course_time = "2016/03/19"
+
+    mail(:to => user.email, :subject => "Donchi課程 報名成功!")
+
   end
 end

@@ -25,6 +25,7 @@ class CourseController < ApplicationController
 		unless has_relation(@user,@course)
 			RelationUserCourse.create(:user_id => @user.id , :course_id => @course.id)
 		end
+		UserMailer.send_email(@user,@course).deliver_now!
 		redirect_to :action => "show" 
 	end
 
