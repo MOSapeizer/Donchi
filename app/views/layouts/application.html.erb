@@ -10,6 +10,29 @@
 
 </head>
 <body>
+
+	<header>
+		<div class="login pull-right">
+
+
+			
+		</div>
+
+		<div class="popup">
+			<% if notice %>
+			  <p class="alert alert-success"><%= notice %></p>
+			<% end %>
+			<% if alert %>
+			  <p class="alert alert-danger"><%= alert %></p>
+			<% end %>
+		</div>
+	</header>
+
+	<div class="login-form" container>
+		<h2>Member Login</h2>
+		<%= render "devise/sessions/new" %>
+	</div>
+
 	<%= render 'layouts/header' %>
 	<%= yield %>
 

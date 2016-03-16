@@ -6,9 +6,9 @@ class CourseController < ApplicationController
 
 	def show
 		if user_signed_in?
-			@user = current_user
+			@user = current_user #return user object
 			@course = Course.find_by name: "course1"
-			@has = has_relation(@user,@course)
+			@is_attend = has_relation(@user,@course)
 
 		end
 
@@ -19,15 +19,18 @@ class CourseController < ApplicationController
 	end
 
 
-	def sign_in
+	def sign_up_course
 		@user = current_user
 		@course = Course.find_by name:"course1"
-		@relation = RelationUserCourse.create(:user_id => @user.id , :course_id => @course.id)
-
+		unless has_relation(@user,@course)
+			RelationUserCourse.create(:user_id => @user.id , :course_id => @course.id)
+		end
+		UserMailer.send_email(@user,@course).deliver_now!
 		redirect_to :action => "show" 
 	end
 
+
 	def has_relation(user,course)
-		RelationUserCourse.find_by(user_id: @user.id , course_id: @course.id).nil?
+		RelationUserCourse.find_by(user_id: user.id , course_id: course.id)
 	end	
 end
