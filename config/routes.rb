@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   devise_for :users, :skip => [:sessions]
 
   as :user do
-    get 'login' => 'devise/sessions#new', :as => :new_user_session
-    post 'signUp' => 'devise/sessions#create', :as => :user_session
+    get 'login' => 'devise/sessions#new', :as => :new_user_login
+    post 'login' => 'devise/sessions#create', :as => :user_login
+    get 'signup' => 'devise/registrations#new', :as => :user_signup
     delete 'logout' => 'devise/sessions#destroy', :as => :destroy_user_session
   end
   # The priority is based upon order of creation: first created -> highest priority.
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
 
   get 'sign_up_course' => 'course#sign_up_course'
   get '/course/:title/sign_in' => 'course#sign_in'
-  
+
   resources :course
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

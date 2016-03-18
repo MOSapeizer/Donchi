@@ -11,4 +11,9 @@ module ApplicationHelper
 		@devise_mapping ||= Devise.mappings[:user]
 	end
 
+	def need_header? name
+		except = ["sessions", "registrations"]
+		except.include? name
+	end
+
 end

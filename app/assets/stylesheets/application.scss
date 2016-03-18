@@ -272,9 +272,11 @@ footer {
 			&[type="email"],
 			&[type="password"] {
 				font-size: 20px;
+				font-weight: lighter;
+				min-width: 400px;
 				width: 45%;
 				border-radius: 9%/100%;
-				padding: 0.5em 1em;
+				padding: 0.35em 1em;
 				margin: 0.5em;
 			}
 			text-align: center;
