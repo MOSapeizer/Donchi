@@ -23,7 +23,6 @@ $block-margin-bottom: 4em;
 
 	.nodes {
 		display: block;
-		padding: 0 10%;
 		margin-top: 2em;
 		margin-bottom: 2em;
 		text-align: justify;
@@ -44,90 +43,24 @@ $block-margin-bottom: 4em;
 	  border-radius: 99em;
 	  border: 5px solid #eee;
 	  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3); 
+	  &:first-child {
+	  	margin-left: 10%
+	  }
+	  &:last-child {
+	  	margin-right: 10%	
+	  }
 	}
 
+	.enroll {
+		margin-bottom: 2em;
+		text-align: center;
+		a {
+			// line-height: 4em;
+			display: inline-block;
+			padding: 0.75em;
+			width: 80%;
+			color: white;
+			background-color: #FF4963;
+		}
+	}
 }
-// aside {
-// 	position: fixed;
-// 	min-width: 1px;
-// }
-// .main {
-// 	width: 100%;
-
-// }
-
-// .course-picture {
-// 	text-align: center;
-// 	h1 {
-
-// 	}
-// }
-
-// .team-info {
-// 	display: flex;
-// }
-
-// .coach {
-// 	width: 150px;
-// 	height: 150px;
-// 	border-radius: 50%;
-// 	background-color: black;
-// 	text-align: center;
-// 	overflow: hidden;
-// 	margin: 2em auto;
-// 	span {
-// 		display: relative;
-// 	}
-// 	img {
-// 		width: auto;
-// 		height: 100%;
-// 		transform: translate(-15%, 5%);
-// 	}
-// 	&:after {
-// 		content: "";
-// 		width: 100%;
-// 		display: inline-block;
-// 	}
-// }
-
-// .list {
-// 	.lesson {
-// 		width: 100%;
-// 		padding: 2em;
-// 		.status {
-// 			text-align: center;
-// 			height: 100%;
-// 		}
-// 		&:nth-child(odd) {
-// 			background-color: gray;
-// 		}
-// 		&:nth-child(even) {
-// 			background-color: lightgray;
-// 		}
-// 		a {
-// 			position: absolute;
-// 			display: block;
-// 			left: 0;
-// 			right: 0;
-// 			top: 0;
-// 			bottom: 0;
-// 		}
-// 	}
-// 	margin-left: 0;
-// 	margin-bottom: 10%;
-// }
-
-// .enroll {
-// 	width: 50em;
-// 	padding: 0.75em;
-// 	margin: auto;
-// 	margin-bottom: $block-margin-bottom;
-// 	background-color: #FF4963;
-// 	text-align: center;
-// 	span {
-// 		color: white;
-// 	}
-// }
-
-
-
