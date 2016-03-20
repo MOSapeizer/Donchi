@@ -5,21 +5,43 @@
 @import "centre";
 $block-margin-bottom: 4em;
 
+body {
+	// min-height: 800px;
+	max-width: 1024;
+	background-image: image-url("background/workout.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
+footer {
+	position: absolute;
+	bottom: 0;
+}
 .main {
+	position: absolute;
+	height: 80%;
+	width: 40%;
+	right: 0;
 	padding-bottom: 2em;
-	background-color: white;
 
-	h2 {
+	// width: 40%;
+	// background-color: black;
+
+	h1 {
+		margin-top: 4em;
 		text-align: center;
-
+		color: white;
 	}
 
 	.top-nav {
-		background-color: gray;
+		// background-color: gray;
+		text-align: center;
 		.header-img {
-			opacity: 0.9;
-			box-shadow: 1px, 1px;
+			width: 700px;
+			margin: 0 auto;
+			&:after {
+				content: "";
+			}
 		}
 	}
 
@@ -37,7 +59,7 @@ $block-margin-bottom: 4em;
 
 	.circle {
 	  overflow: hidden;
-	  display: inline-block;
+	  display: block;
 	  width: 150px;
 	  height: 150px;
 	  -webkit-border-radius: 99em;
@@ -45,20 +67,19 @@ $block-margin-bottom: 4em;
 	  border-radius: 99em;
 	  border: 5px solid #eee;
 	  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3); 
-	  &:first-child {
-	  	margin-left: 10%
-	  }
-	  &:last-child {
-	  	margin-right: 10%	
-	  }
+	 
 	}
 
 	.enroll {
 		text-align: center;
+		position: relative;
+		bottom: 0;
 		a {
 			display: inline-block;
-			padding: 0.75em;
-			width: 80%;
+			padding: 0.25em 0.75em;
+			margin-top: 60%;
+			width: 12em;
+			font-size: 1.5rem;
 			color: white;
 			background-color: #FF4963;
 		}

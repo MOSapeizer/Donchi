@@ -6,6 +6,7 @@ class CourseController < ApplicationController
 
 	def show
 		if user_signed_in?
+			
 			@user = current_user #return user object
 			@course = Course.find_by name: "course1"
 			@is_attend = has_relation(@user,@course)
