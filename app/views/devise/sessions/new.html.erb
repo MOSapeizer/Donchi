@@ -5,7 +5,7 @@
 	<%= render 'widgets/close' %>
 
 	<div class="login-form">
-		<%= form_for(resource, as: resource_name, url: user_login_path(resource_name)) do |f| %>
+		<%= form_for(resource, as: resource_name, url: user_login_path(resource) ) do |f| %>
 			<h1>Hello there,</h1>
 			<%= f.email_field :email, autofocus: true, placeholder: "Email"%><br />
 			<%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
