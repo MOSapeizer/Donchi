@@ -8,18 +8,22 @@ $block-margin-bottom: 4em;
 
 .main {
 	padding-bottom: 2em;
-	background-color: white;
+	background-color: black;
 
-	h2 {
+	h1 {
 		text-align: center;
-
+		color: white;
 	}
 
 	.top-nav {
-		background-color: gray;
+		// background-color: gray;
+		text-align: center;
 		.header-img {
-			opacity: 0.9;
-			box-shadow: 1px, 1px;
+			width: 700px;
+			margin: 0 auto;
+			&:after {
+				content: "";
+			}
 		}
 	}
 
