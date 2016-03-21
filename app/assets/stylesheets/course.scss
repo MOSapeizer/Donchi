@@ -4,84 +4,237 @@
 
 @import "centre";
 $block-margin-bottom: 4em;
+$font-color: #CCCC88;
+$circle-size: 13em;
+$circle-margin-top: 4em;
 
 body {
-	// min-height: 800px;
-	max-width: 1024;
 	background-image: image-url("background/workout.jpg");
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: auto auto;
+	background-position: center top;
+	font-family: sans-serif;
 }
 
 footer {
-	position: absolute;
-	bottom: 0;
+	clear: both
 }
-.main {
-	position: absolute;
-	height: 80%;
-	width: 40%;
-	right: 0;
-	padding-bottom: 2em;
 
-	// width: 40%;
-	// background-color: black;
+.right {
+	float: right;
+	text-align: left;
+}
+
+.left {
+	float: left;
+	text-align: right;
+}
+
+.description {
+	box-sizing: border-box;
+	margin-top: 12em;
+	text-align: right;
 
 	h1 {
-		margin-top: 4em;
-		text-align: center;
-		color: white;
+		font-size: 2.5rem;
+		margin-right: 5%;
+		color: $font-color;
+		font-weight: bold;
 	}
 
-	.top-nav {
-		// background-color: gray;
+}
+
+.description-text {
+	text-align: right;
+	color: white;
+	padding-left: 50%;
+	padding-right: 7%;
+	margin-bottom: 40em;
+	p {	
+		margin-top: 1em;
+		font-size: 1.1rem;
+	}
+}
+
+.main {
+	font-family: sans-serif;
+	box-sizing: border-box;
+	padding-left: 2em;
+	padding-right: 10em;
+	float: right;
+	width: 75%;
+	height: 60rem;
+	color: rgba(255, 255, 255, 0.6);
+
+	.lesson {
+		box-sizing: border-box;
+		&:nth-child(1){
+			height: 7.5rem;
+		}
+		&:nth-child(2){
+			height: 10rem;
+		}
+		&:nth-child(3){
+			height: 7.5rem;
+		}
+		&:nth-child(4){
+			height: 8.5rem;
+		}
+		&:nth-child(5), &:nth-child(6){
+			h2 { color: $font-color; }
+			height: 9.5rem;
+		}
+	}
+	h2 {
+		text-shadow: 1px 1px 5px black;
+		color: rgba(255, 255, 255, 0.8);
+		span {
+			color: rgba(255, 255, 255, 0.6);
+			font-size: 1.4rem;
+		}
+	}
+
+	p {
+		text-shadow: 1px 1px 5px black;
+		font-size: 1.3em;
+	}
+
+}
+
+.aside {
+	box-sizing: border-box;
+	float: left;
+	width: 25%;
+	height: 60rem;
+	img {
+		width: 8em;
+		float: right;
+	}
+}
+
+.advertise {
+	clear: both;
+	margin: 0;
+	padding: 1em 0;
+	padding-left: 25%;
+	color: $font-color;
+	font-size: 2rem;
+}
+
+.coach-info {
+	clear: both;
+	width: 100%;
+	height: 45rem;
+	background-image: image-url('background/background-coach.png');
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	margin-top: 2em;
+	.title {
+		margin: 0;
+		box-sizing: border-box;
+		width: 35%;
+		height: 20rem;
+		float: left;
+		color: $font-color;
+		padding: 1em 5%;
+		font-size: 4em;
 		text-align: center;
-		.header-img {
-			width: 700px;
-			margin: 0 auto;
-			&:after {
-				content: "";
+	}
+
+	.coach {
+		box-sizing: border-box;
+		width: 65%;
+		height: 20rem;
+		.circle {
+			margin-top: $circle-margin-top;
+			overflow: hidden;
+			display: inline-block;
+			width: $circle-size;
+			height: $circle-size;
+			-webkit-border-radius: 99em;
+			-moz-border-radius: 99em;
+			border-radius: 99em;
+			border: 5px solid #eee;
+			box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3); 
+			&:first-child {
+				background: image-url('coach/black.png') 100%;
+				background-position: center center;
+			}
+			&:nth-child(2) {
+				background: image-url('coach/ian.png') no-repeat;
+				background-size: 150%;
+				background-position: -50px -25px;
 			}
 		}
-	}
+		.info {
+			position:relative; 
+			top: 0;
+			color: rgba(255, 255, 255, 0.6);
+			display: inline-block;
+			padding: 10% 5%;
+			h1 { color: rgba(255, 255, 255, 1) }
+			p { 
+				font-size: 1.5em;
+				padding-bottom: 2em;
+				text-shadow: 1px 1px 5px black;
+			}
+		}
 
-	.nodes {
-		display: block;
+	}
+}
+
+.price-info {
+	h1 {
 		margin-top: 2em;
-		margin-bottom: 2em;
-		text-align: justify;
-		&:after {
-	  		content: "";
-			display: inline-block;
-			width: 100%;
-	  	}
-	}
-
-	.circle {
-	  overflow: hidden;
-	  display: block;
-	  width: 150px;
-	  height: 150px;
-	  -webkit-border-radius: 99em;
-	  -moz-border-radius: 99em;
-	  border-radius: 99em;
-	  border: 5px solid #eee;
-	  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3); 
-	 
-	}
-
-	.enroll {
 		text-align: center;
-		position: relative;
-		bottom: 0;
-		a {
-			display: inline-block;
-			padding: 0.25em 0.75em;
-			margin-top: 60%;
-			width: 12em;
-			font-size: 1.5rem;
-			color: white;
-			background-color: #FF4963;
+		font-size: 2.5em;
+		color: $font-color;
+	}
+	.block {
+		box-sizing: border-box;
+		display: inline-block;
+		width: 50%;
+		padding: 6%;
+		.price {
+			display: block;
+			color: $font-color;
+			font-size: 6em;
+			font-weight: bold;
+		}
+		.delete {
+			margin-bottom: -1em;
+			text-decoration: line-through;
+			color: rgba(255, 255, 255, 0.6);
+			font-size: 2em;
+			font-style: italic;
+		}
+		p {
+			color: $font-color;
+			font-size: 2em;
+			padding: 0 2em;
+			margin-top: -1em;
 		}
 	}
+}
+
+.enroll {
+	text-align: center;
+	a {
+		display: inline-block;
+		padding: 0.75em;
+		width: 12em;
+		font-size: 2.5rem;
+		color: white;
+		background-color: #C0F0A0;
+		border-radius: 0.5em;
+		text-shadow: 1px 1px 100px black;
+		text-decoration: none;
+	}
+}
+
+.notification {
+	color: white;
+	margin-top: 4em;
+	padding-left: 4em;
+	font-size: 1.3em;
 }
