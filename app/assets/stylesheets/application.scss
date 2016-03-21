@@ -30,7 +30,7 @@ html, body {
 	height: auto;
 	font-family: Merriweather-Light, Georgia, serif;
 	background-color: $application-background-color;
-	font-size: 18px;
+	font-size: 14px;
 }
 
 .carousel-inner > .item > img,
@@ -201,3 +201,13 @@ footer {
 		padding: 0.5em;
 	}
 }
+
+@media screen and (max-width: 768px) {
+
+	html, body {
+		font-size: 16px;
+	}
+
+}
+
+
