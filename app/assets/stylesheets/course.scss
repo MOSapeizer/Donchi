@@ -12,12 +12,22 @@ body {
 	background-image: image-url("background/workout.jpg");
 	background-repeat: no-repeat;
 	background-size: auto auto;
-	background-position: center-top;
+	background-position: center top;
 	font-family: sans-serif;
 }
 
 footer {
 	clear: both
+}
+
+.right {
+	float: right;
+	text-align: left;
+}
+
+.left {
+	float: left;
+	text-align: right;
 }
 
 .description {
@@ -131,16 +141,6 @@ footer {
 		text-align: center;
 	}
 
-	.right {
-		float: right;
-		text-align: left;
-	}
-
-	.left {
-		float: left;
-		text-align: right;
-	}
-
 	.coach {
 		box-sizing: border-box;
 		width: 65%;
@@ -183,17 +183,58 @@ footer {
 	}
 }
 
+.price-info {
+	h1 {
+		margin-top: 2em;
+		text-align: center;
+		font-size: 2.5em;
+		color: $font-color;
+	}
+	.block {
+		box-sizing: border-box;
+		display: inline-block;
+		width: 50%;
+		padding: 6%;
+		.price {
+			display: block;
+			color: $font-color;
+			font-size: 6em;
+			font-weight: bold;
+		}
+		.delete {
+			margin-bottom: -1em;
+			text-decoration: line-through;
+			color: rgba(255, 255, 255, 0.6);
+			font-size: 2em;
+			font-style: italic;
+		}
+		p {
+			color: $font-color;
+			font-size: 2em;
+			padding: 0 2em;
+			margin-top: -1em;
+		}
+	}
+}
+
 .enroll {
 	text-align: center;
-	position: relative;
-	bottom: 0;
 	a {
 		display: inline-block;
-		padding: 0.25em 0.75em;
-		margin-top: 60%;
+		padding: 0.75em;
 		width: 12em;
-		font-size: 1.5rem;
+		font-size: 2.5rem;
 		color: white;
-		background-color: #FF4963;
+		background-color: #C0F0A0;
+		border-radius: 0.5em;
+		text-shadow: 1px 1px 100px black;
+		text-decoration: none;
 	}
+}
+
+.notification {
+	color: white;
+	margin-top: 4em;
+	padding-left: 4em;
+	font-size: 1.3em;
 }
