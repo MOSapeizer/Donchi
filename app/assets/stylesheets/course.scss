@@ -4,19 +4,17 @@
 
 @import "centre";
 $block-margin-bottom: 4em;
+$font-color: #CCCC88;
 
 body {
-	// min-height: 800px;
-	max-width: 1024;
 	background-image: image-url("background/workout.jpg");
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 100% auto;
 	font-family: sans-serif;
 }
 
 footer {
-	position: absolute;
-	bottom: 0;
+	clear: both
 }
 
 .description {
@@ -27,7 +25,7 @@ footer {
 	h1 {
 		font-size: 2.5rem;
 		margin-right: 5%;
-		color: #CCCC77;
+		color: $font-color;
 		font-weight: bold;
 	}
 
@@ -38,7 +36,8 @@ footer {
 	color: white;
 	padding-left: 50%;
 	padding-right: 7%;
-	p {
+	margin-bottom: 40em;
+	p {	
 		margin-top: 1em;
 		font-size: 1.1rem;
 	}
@@ -46,60 +45,103 @@ footer {
 
 .main {
 	font-family: sans-serif;
+	box-sizing: border-box;
+	padding-left: 2em;
+	padding-right: 10em;
+	float: right;
+	width: 75%;
+	height: 60rem;
+	color: rgba(255, 255, 255, 0.8);
 
-	// width: 40%;
-	// background-color: black;
-
-	
-	.top-nav {
-		// background-color: gray;
-		text-align: center;
-		.header-img {
-			width: 700px;
-			margin: 0 auto;
-			&:after {
-				content: "";
-			}
+	.lesson {
+		box-sizing: border-box;
+		&:nth-child(1){
+			height: 7.5rem;
+		}
+		&:nth-child(2){
+			height: 10rem;
+		}
+		&:nth-child(3){
+			height: 7.5rem;
+		}
+		&:nth-child(4){
+			height: 8.5rem;
+		}
+		&:nth-child(5), &:nth-child(6){
+			h2 { color: $font-color; }
+			height: 9.5rem;
 		}
 	}
 
-	.nodes {
-		display: block;
-		margin-top: 2em;
-		margin-bottom: 2em;
-		text-align: justify;
-		&:after {
-	  		content: "";
-			display: inline-block;
-			width: 100%;
-	  	}
-	}
-
-	.circle {
-	  overflow: hidden;
-	  display: block;
-	  width: 150px;
-	  height: 150px;
-	  -webkit-border-radius: 99em;
-	  -moz-border-radius: 99em;
-	  border-radius: 99em;
-	  border: 5px solid #eee;
-	  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3); 
-	 
-	}
-
-	.enroll {
-		text-align: center;
-		position: relative;
-		bottom: 0;
-		a {
-			display: inline-block;
-			padding: 0.25em 0.75em;
-			margin-top: 60%;
-			width: 12em;
+	h2 {
+		span {
+			color: rgba(255, 255, 255, 0.8);
 			font-size: 1.5rem;
-			color: white;
-			background-color: #FF4963;
 		}
+	}
+
+	p {
+		font-size: 1.3em;
+	}
+
+}
+
+.aside {
+	box-sizing: border-box;
+	float: left;
+	width: 25%;
+	height: 60rem;
+	img {
+		width: 8em;
+		float: right;
+	}
+}
+
+.advertise {
+	clear: both;
+	margin: 0;
+	padding: 1em 0;
+	padding-left: 25%;
+	color: $font-color;
+	font-size: 2rem;
+}
+
+.nodes {
+	display: block;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: justify;
+	&:after {
+  		content: "";
+		display: inline-block;
+		width: 100%;
+  	}
+}
+
+.circle {
+  overflow: hidden;
+  display: block;
+  width: 150px;
+  height: 150px;
+  -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  border-radius: 99em;
+  border: 5px solid #eee;
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3); 
+ 
+}
+
+.enroll {
+	text-align: center;
+	position: relative;
+	bottom: 0;
+	a {
+		display: inline-block;
+		padding: 0.25em 0.75em;
+		margin-top: 60%;
+		width: 12em;
+		font-size: 1.5rem;
+		color: white;
+		background-color: #FF4963;
 	}
 }
