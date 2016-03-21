@@ -76,10 +76,10 @@
 
 
 .login-background {
-	background-image: image_url('background/background_2.png'); 
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
+	// background-image: image_url('background/background_2.png'); 
+	// background-repeat: no-repeat;
+	// background-size: cover;
+	// background-position: center center;
 	width: 100%;
 	height: 100vh;
 
@@ -100,5 +100,28 @@
 			content: '×';
 			font-size: 6em;
 		}
+	}
+}
+
+@media screen and (max-height: 768px ) {
+	.login-form {
+		min-width: 0px;
+		min-height: 0px;
+		width: 100%;
+		form {
+			input[type="email"],
+			input[type="password"] {
+			    min-width: 0px;
+			    width: 95%;
+			    margin: 0.5em 0;
+			}
+			input[type="submit"] {
+	    		width: 65%;
+	    		padding: 0.8em;
+	    	}
+		}	
+	}
+	.login-background {
+		.close { font-size: 10px; }
 	}
 }

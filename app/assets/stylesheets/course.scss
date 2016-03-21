@@ -42,7 +42,6 @@ footer {
 		color: $font-color;
 		font-weight: bold;
 	}
-
 }
 
 .description-text {
@@ -313,12 +312,13 @@ footer {
 	.coach-info {
 
 		background-size: cover;
-		height: 70rem;
+		height: 65rem;
 		.title {
+			font-size: 2rem;
 			width: 100%;
 			float: none;
 			padding: 1em;
-			height: 7rem;
+			height: 2rem;
 		}
 		.coach {
 			float: none;
