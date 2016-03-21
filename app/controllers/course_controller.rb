@@ -1,5 +1,5 @@
 class CourseController < ApplicationController
-	before_action :authenticate_user!, except: [:show]
+	before_action :authenticate_user!, except: [:show,:sign_up_course]
 	def index
 		
 	end
@@ -21,13 +21,19 @@ class CourseController < ApplicationController
 
 
 	def sign_up_course
-		@user = current_user
-		@course = Course.find_by name:"course1"
-		unless has_relation(@user,@course)
-			RelationUserCourse.create(:user_id => @user.id , :course_id => @course.id)
-		end
-		UserMailer.send_email(@user,@course).deliver_now!
-		redirect_to :action => "show"
+		if user_signed_in?
+			@user = current_user
+			@course = Course.find_by name:"course1"
+			unless has_relation(@user,@course)
+				RelationUserCourse.create(:user_id => @user.id , :course_id => @course.id)
+			end
+			UserMailer.send_email(@user,@course).deliver_now!
+			redirect_to :action => "show"
+		
+
+		else
+			redirect_to new_user_registration_path
+		end	
 	end
 
 
