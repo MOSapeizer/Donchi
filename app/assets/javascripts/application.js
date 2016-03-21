@@ -26,20 +26,20 @@ $(function() {
 	$(".popup").fadeIn("slow");
 	$(".popup").fadeOut(1500);
 
-	$(window).on('scroll', function () {
-	    var scrollTop = $(this).scrollTop();
-	    var h1_top = $('h1').offset().top;
-	    var half_height = $(this).outerHeight()/2;
-	    var range = 800;
-	    var ratio = 1- (h1_top - scrollTop) / (range);
+	// $(window).on('scroll', function () {
+	//     var scrollTop = $(this).scrollTop();
+	//     var h1_top = $('h1').offset().top;
+	//     var half_height = $(this).outerHeight()/2;
+	//     var range = 800;
+	//     var ratio = 1- (h1_top - scrollTop) / (range);
 
-	   	console.log(ratio);
-	    $('h1').css({'opacity': ratio});
+	//    	console.log(ratio);
+	//     $('h1').css({'opacity': ratio});
 
-	    if(ratio > 1) {
-	    	$('h1').css({'opacity': 1 });
-	    } else if(ratio < 0 ) { 
-	    	$('h1').css({'opacity': 0}) 
-		}
-	})
+	//     if(ratio > 1) {
+	//     	$('h1').css({'opacity': 1 });
+	//     } else if(ratio < 0 ) { 
+	//     	$('h1').css({'opacity': 0}) 
+	// 	}
+	// })
 });
