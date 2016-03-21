@@ -13,7 +13,7 @@ body {
 	background-image: image-url("background/workout.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% auto;
-	background-position: center top;
+	background-position: center 4em;
 	font-family: sans-serif;
 }
 
@@ -54,6 +54,18 @@ footer {
 		margin-top: 1em;
 		font-size: 1.5rem;
 	}
+
+}
+
+@media screen and (min-width: 768px) {
+	.description-text {	
+		p {	
+			float: right;
+			width: 16em;
+			clear: both;
+		}
+	}
+
 }
 
 .main {
@@ -163,6 +175,7 @@ footer {
 			
 		}
 		.black {
+			min-height: 0;
 			background: image-url('coach/black.png') 100%;
 			background-position: center center;
 		}
@@ -362,9 +375,11 @@ footer {
 	}
 
 	.enroll {
-		width: 100%;
+		width: 80%;
+		margin: 0 auto;
 		a {
 			width: 100%;
+			font-size: 1.5rem;
 		}
 	}
 	.notification {
@@ -374,9 +389,18 @@ footer {
 	}
 }
 
-@media screen and ( max-width: 400px ){
+@media screen and ( max-width: 420px ){
 	.description {
 		h1 { font-size: 1.6rem; }
+	}
+
+	.enroll {
+		width: 80%;
+		margin: 0 auto;
+		a {
+			width: 100%;
+			font-size: 1.5rem;
+		}
 	}
 
 	.description-text {
@@ -402,7 +426,11 @@ footer {
 				font-size: 1.5em; 
 				&.pullRight { padding-left: 4em; }
 			}
+			p {
+				font-size: 1.5em;
+			}
 		}
+
 	}
 
 }

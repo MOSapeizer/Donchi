@@ -11,10 +11,12 @@
 	max-width: 800px;
 	min-height: 600px;
 	width: 70%;
-	height: 70%;
+	height: 60vw;
 	border-radius: 4%;
 	text-align: center;
-
+	span {
+		color: black;
+	}
 	a.login-anchor {
 		line-height: 2em;
 		// display: block;
@@ -106,7 +108,7 @@
 @media screen and (max-height: 768px ) {
 	.login-form {
 		min-width: 0px;
-		min-height: 0px;
+		min-height: 500px;
 		width: 100%;
 		form {
 			input[type="email"],
