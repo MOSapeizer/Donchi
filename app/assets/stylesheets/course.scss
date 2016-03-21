@@ -249,18 +249,24 @@ footer {
 
 
 @media screen and ( max-width: 768px ){
+
+	h2 {
+		font-size: 24px;
+	}
 	.description-text {
+		h1 { font-size: 2.2em; }
 		text-shadow: 1px 1px 5px black;
-		padding-left: 10%;
+		padding-left: 1%;
 		padding-right: 7%;
 		margin-bottom: 5em;
 		p {	
 			margin-top: 1em;
-			font-size: 1rem;
+			font-size: 0.5rem;
 		}
 	}
 
 	.main {
+		padding-right: 1em;
 		h2 {
 			display: block;
 		}
@@ -292,17 +298,20 @@ footer {
 	.aside {
 		img {
 		 	width: 8.4em;
-		 	margin-right: -1.5em;
+		 	margin-right: -2.5em;
 		}
 
 	}
 	.advertise {
+		text-align: center;
+		font-size: 1.5em;
 		padding-left: 0.5em;
 	}
 
 	.coach-info {
+
 		background-size: cover;
-		height: 60rem;
+		height: 70rem;
 		.title {
 			width: 100%;
 			float: none;
@@ -313,17 +322,28 @@ footer {
 			float: none;
 			text-align: center;
 			width: 100%;
-			height: 25em;
+			height: 30em;
 			.info {
+				h1 {
+					font-size: 30px;
+				}
 				position: static;
 				display: block;
 				width: 100%;
 				font-size: .7em;
 			}
-		}
-		.circle:after {
-			content: "";
-			display: block;
+			.circle-wrap {
+				width: 100%;
+				height:16em;
+				.circle:after {
+					content: "";
+					display: block;
+				}
+				.cricle .ian {
+					background-position: -45px -20px;
+				}
+			}
+
 		}
 	}
 	.price-info {
@@ -331,5 +351,28 @@ footer {
 			font-size: 2.2em;
 		}
 		font-size: 10px;
+	}
+
+	.enroll {
+		width: 100%;
+		a {
+			width: 100%;
+		}
+	}
+	.notification {
+	    margin-top: 2em;
+	    padding-left: 2em;
+	    font-size: 1em;
+	}
+}
+
+@media screen and ( max-width: 400px ){
+	.description {
+		h1 { font-size: 2rem; }
+	}
+	.main {
+		h2 {
+			font-size: 20px;
+		}
 	}
 }
