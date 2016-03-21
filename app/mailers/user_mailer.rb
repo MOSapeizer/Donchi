@@ -9,10 +9,14 @@ class UserMailer < ApplicationMailer
   def send_email(user,course)
     @user_email = user.email
     @user_name =  user.name
+    @user_phone = user.phone
     @course_name = course.name
     @course_time = "2016/03/19"
+
 
     mail(:to => user.email, :subject => "Donchi課程 報名成功!")
 
   end
+
+
 end
