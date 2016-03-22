@@ -9,9 +9,9 @@
 	@include centre(both);
 	min-width: 600px;
 	max-width: 800px;
-	min-height: 600px;
-	width: 70%;
-	height: 60vw;
+	min-height: 28em;
+	width: 50em;
+	height: 38em;
 	border-radius: 4%;
 	text-align: center;
 	span {
@@ -29,11 +29,15 @@
 
 		h1 {
 			color: #333333;
-			margin-top: 15%;
-			margin-bottom: 8%;
+			margin-top: 2.5em;
+			margin-bottom: 2em;
 			font-weight: 900;
 			font-family: sans-serif;
 		}
+
+		.bottom-shrink {
+			margin-bottom: 1em;
+	    }
 
 		input {
 			&[type="email"],
@@ -105,33 +109,43 @@
 	}
 }
 
-@media screen and (max-height: 768px ) {
+@media screen and (max-width: 768px ) {
 	.login-form {
 		min-width: 0px;
 		min-height: 500px;
 		width: 100%;
+		max-width: 95%;
 		form {
 			input[type="email"],
 			input[type="password"] {
 			    min-width: 0px;
-			    width: 95%;
+
+			    width: 20em;
 			    margin: 0.5em 0;
 			}
 			input[type="submit"] {
 	    		width: 16em;
 	    		padding: 0.8em;
 	    	}
+	    	.bottom-shrink {
+				margin-bottom: 0.5em;
+	    	}
 		}
 	}
 	.login-background {
-		.close { font-size: 10px; }
+		.close { 
+			z-index: 3;
+			font-size: 10px; 
+		}
 	}
 }
 
-@media screen and (max-width: 420px  ) {
+@media screen and (max-width: 425px  ) {
 	.login-form {
 		min-width: 0px;
 		min-height: 500px;
+		max-height: 30em;
+		max-width: 100%;
 		width: 100%;
 		form {
 			input[type="email"],
