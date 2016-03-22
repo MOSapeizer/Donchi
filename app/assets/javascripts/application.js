@@ -26,6 +26,22 @@ $(function() {
 	$(".popup").fadeIn("slow");
 	$(".popup").fadeOut(1500);
 
+	$('.btn-custom').click(function() {
+		p = $(this).prev();
+		span = p.prev();
+		button = $(this);
+		if(p.hasClass("active")) { 
+			p.removeClass('active'); 
+			button.removeClass('less-info').text("more");
+			span.show();
+		}
+		else {
+			p.addClass('active');
+			button.addClass('less-info').text("less");
+			span.hide();
+		}
+	})
+
 	// $(window).on('scroll', function () {
 	//     var scrollTop = $(this).scrollTop();
 	//     var h1_top = $('h1').offset().top;
