@@ -55,5 +55,7 @@ group :development do
   gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
   gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
+  gem 'capistrano-rails'
+  gem 'capistrano-passenger'
 end
 
