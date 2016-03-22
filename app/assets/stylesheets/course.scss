@@ -302,14 +302,14 @@ footer {
 				color: gray;
 				background-color: black;
 				padding: 0em 0.5em;
-				margin-left: 0.5em;
+				// margin-left: 0.5em;
 			}
 
 			.less-info {
 				margin-left: 0;
 			}
 			.active {
-				display: block;
+				display: inline;
 			}
 			span, p { font-size: 1em; }
 			&:nth-child(1){

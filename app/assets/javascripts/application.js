@@ -27,18 +27,21 @@ $(function() {
 	$(".popup").fadeOut(1500);
 
 	$('.btn-custom').click(function() {
-		p = $(this).prev();
-		span = p.prev();
 		button = $(this);
+		span = button.next()
+		p = span.next();
+		p.slideToggle( 500, "easeOutSine");
 		if(p.hasClass("active")) { 
 			p.removeClass('active'); 
 			button.removeClass('less-info').text("more");
 			span.show();
+
 		}
 		else {
 			p.addClass('active');
 			button.addClass('less-info').text("less");
 			span.hide();
+
 		}
 	})
 
