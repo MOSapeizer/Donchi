@@ -70,33 +70,23 @@ footer {
 }
 
 .main {
+	display: inline-block;
 	font-family: sans-serif;
 	box-sizing: border-box;
 	padding-left: 1em;
 	padding-right: 3em;
 	float: right;
 	width: 75%;
-	height: 65rem;
+	// height: 70rem;
 	color: rgba(255, 255, 255, 0.6);
 
 	.lesson {
+		display: inline-block;
 		.btn-custom { display: none; }
 		box-sizing: border-box;
-		&:nth-child(1){
-			height: 8.5rem;
-		}
-		&:nth-child(2){
-			height: 11rem;
-		}
-		&:nth-child(3){
-			height: 9rem;
-		}
-		&:nth-child(4){
-			height: 9.5rem;
-		}
+		
 		&:nth-child(5), &:nth-child(6){
 			h2 { color: $font-color; }
-			height: 10.5rem;
 		}
 	}
 	h2 {
@@ -119,13 +109,35 @@ footer {
 }
 
 .aside {
+	display: inline-block;
 	box-sizing: border-box;
 	float: left;
 	width: 25%;
-	height: 65rem;
+	// height: 70rem;
+	div {
+		text-align: right;
+	}
 	img {
-		width: 8em;
-		float: right;
+		width: 3.5em;
+		// float: right;
+		&:nth-child(1) {
+
+		}
+		&:nth-child(2) {
+
+		}
+		&:nth-child(3) {
+
+		}
+		&:nth-child(4) {
+
+		}
+		&:nth-child(5) {
+
+		}
+		&:nth-child(6) {
+
+		}
 	}
 }
 
@@ -312,30 +324,22 @@ footer {
 				display: inline;
 			}
 			span, p { font-size: 1em; }
-			&:nth-child(1){
-				height: 8rem;
-			}
-			&:nth-child(2){
-				height: 10rem;
-			}
-			&:nth-child(3){
-				height: 8rem;
-			}
-			&:nth-child(4){
-				height: 9rem;
-			}
-			&:nth-child(5), &:nth-child(6){
-				h2 { color: $font-color; }
-				height: 10rem;
-			}
 		}
 		
 	}
 
 	.aside {
 		img {
-		 	width: 8.4em;
-		 	margin-right: -2.5em;
+		 	width: 3.4em;
+		 	// margin-right: -2.5em;
+		 	&::after{
+		 		content: '';
+		 		display: inline-block;
+		 	}
+		}
+		div {
+			text-align: right;
+			width: 100%;
 		}
 
 	}

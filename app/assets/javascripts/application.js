@@ -26,24 +26,71 @@ $(function() {
 	$(".popup").fadeIn("slow");
 	$(".popup").fadeOut(1500);
 
+	lesson = {};
+	height = lessonHeight(lesson);
+
+	var width = $(window).width();
+	$(window).resize(function(){
+	   if($(this).width() != width){
+	      width = $(this).width();
+	      height = lessonHeight(lesson);
+	      console.log(lesson);
+	      for( i= 1 ; i < 7 ; i++){
+			$('.aside div:nth-child(' + i + ')').height(lesson[i] +heightOf(i) );
+			console.log(lesson[i]);
+		  }
+	   }
+	});
+
+	for( i= 1 ; i < 7 ; i++){
+		$('.aside div:nth-child(' + i + ')').height(lesson[i] +heightOf(i) );
+		console.log(lesson[i]);
+	}
+
 	$('.btn-custom').click(function() {
 		button = $(this);
 		span = button.next()
 		p = span.next();
-		p.slideToggle( 500, "easeOutSine");
-		if(p.hasClass("active")) { 
-			p.removeClass('active'); 
-			button.removeClass('less-info').text("more");
-			span.show();
+		index = button.parent().attr('id');
+		div = $('.aside div:nth-child(' + index + ')');
 
+		p.slideToggle( 500, "easeOutSine" );
+		
+		if(p.hasClass('active')) {
+			span.show();
+			p.removeClass('active');
+			console.log(height[index]);
+			div.animate({ height: lesson[index] + heightOf(index) });
+			button.text("more");
+			
 		}
 		else {
-			p.addClass('active');
-			button.addClass('less-info').text("less");
 			span.hide();
-
+			p.addClass('active');
+			div.animate({ height: height[index] });
+			button.text("less");
 		}
-	})
+	});
+
+	function heightOf(index) {
+		offset = { 1: 24,  2: 0,    3: 0,
+		  		   4: 0,   5: 0,  6: 20 };
+		return offset[index];
+	}
+
+	function lessonHeight(lesson) {
+		height = {};
+		for( i = 1 ; i < 7 ; i++){
+			thisLesson = $('.lesson#' + i);
+			lesson[i] = thisLesson.height();
+			p = thisLesson.find('p');
+			h = p.show().height() + 10;
+			p.hide();
+			height[i] = h + lesson[i] + heightOf(i);
+		}
+		console.log(height);
+		return height;
+	}
 
 	// $(window).on('scroll', function () {
 	//     var scrollTop = $(this).scrollTop();
