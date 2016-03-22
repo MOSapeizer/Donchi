@@ -56,7 +56,7 @@ $(function() {
 
 		p.slideToggle( 500, "easeOutSine" );
 		
-		if(p.hasClass('active')) {
+		if(p.hasClass('active') && p.is(":visible")) {
 			span.show();
 			p.removeClass('active');
 			console.log(height[index]);
@@ -85,7 +85,10 @@ $(function() {
 			lesson[i] = thisLesson.height();
 			p = thisLesson.find('p');
 			h = p.show().height() + 10;
-			p.hide();
+			if ( ! ($(window).width() > 767)) {
+				console.log(1)
+				p.hide();
+			}
 			height[i] = h + lesson[i] + heightOf(i);
 		}
 		console.log(height);
