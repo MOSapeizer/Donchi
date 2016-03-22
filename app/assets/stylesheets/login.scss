@@ -118,12 +118,32 @@
 			    margin: 0.5em 0;
 			}
 			input[type="submit"] {
-	    		width: 65%;
+	    		width: 16em;
 	    		padding: 0.8em;
 	    	}
-		}	
+		}
 	}
 	.login-background {
 		.close { font-size: 10px; }
+	}
+}
+
+@media screen and (max-width: 420px  ) {
+	.login-form {
+		min-width: 0px;
+		min-height: 500px;
+		width: 100%;
+		form {
+			input[type="email"],
+			input[type="password"] {
+			    width: 14em;
+			    margin: 0.5em 0;
+			    border-radius: 2em/100%;
+			}
+			input[type="submit"] {
+	    		width: 16em;
+	    		padding: 0.8em;
+	    	}
+		}
 	}
 }
