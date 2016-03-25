@@ -1,0 +1,26 @@
+<div class="login-background">
+  <div class="icon">
+    <%= image_tag 'icon/white_word_aside.png' %>
+  </div>
+  <%= render 'widgets/close' %>
+  
+  <div class="login-form">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <h1>Join Us,</h1>
+
+      <%= devise_error_messages! %>
+      <%= f.email_field :email, autofocus: true, placeholder: "Email"%><br />
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirm Password" %>
+
+      <div class="actions">
+        <%= f.submit "SIGN UP", class: "login-btn"%>
+      </div>
+    <% end %>
+    <%= link_to 'login', user_login_path, class: "login-anchor" %>
+    <!-- <%= render "devise/shared/links" %> -->
+  </div>
+</div>
