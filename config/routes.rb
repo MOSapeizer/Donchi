@@ -3,6 +3,12 @@ Rails.application.routes.draw do
   root 'course#show'
 
   devise_for :users, controllers: { registrations: "custom/registrations" }
+  devise_scope :user do
+    get 'custom/registrations/custom_new', to: 'custom/registrations#custom_new', as: 'custom_new'
+    post 'custom/registrations/custom_create', to: 'custom/registrations#custom_create', as: 'user_custom_create'
+  end
+
+
 
   as :user do
     get 'login' => 'devise/sessions#new', :as => :new_user_login

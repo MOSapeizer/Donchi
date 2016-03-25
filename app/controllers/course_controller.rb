@@ -32,7 +32,7 @@ class CourseController < ApplicationController
 		
 
 		else
-			redirect_to new_user_registration_path
+			redirect_to custom_new_path
 		end	
 	end
 

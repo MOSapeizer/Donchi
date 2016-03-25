@@ -5,7 +5,7 @@
   <%= render 'widgets/close' %>
   
   <div class="login-form">
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= form_for(resource, as: resource_name, url: user_custom_create_path(resource)) do |f| %>
       <h1>Join Us,</h1>
 
       <%= devise_error_messages! %>
@@ -20,7 +20,7 @@
         <%= f.submit "SIGN UP", class: "login-btn"%>
       </div>
     <% end %>
-    <%= link_to 'login', user_login_path, class: "login-anchor" %>
+    <!--<%= link_to 'login', user_login_path, class: "login-anchor" %> -->
     <!-- <%= render "devise/shared/links" %> -->
   </div>
 </div>
