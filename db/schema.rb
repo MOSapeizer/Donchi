@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160213065937) do
+ActiveRecord::Schema.define(version: 20160321031921) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "main_picture_source"
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 20160213065937) do
     t.integer  "popularity"
     t.string   "bodyfitness"
     t.string   "calendar"
+    t.string   "phone"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

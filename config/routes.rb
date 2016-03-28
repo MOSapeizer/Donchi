@@ -2,13 +2,19 @@ Rails.application.routes.draw do
 
   root 'course#show'
 
-  devise_for :users, :skip => [:sessions]
+  devise_for :users, controllers: { registrations: "custom/registrations" }
+  devise_scope :user do
+    get 'custom/registrations/custom_new', to: 'custom/registrations#custom_new', as: 'custom_new'
+    post 'custom/registrations/custom_create', to: 'custom/registrations#custom_create', as: 'user_custom_create'
+  end
+
+
 
   as :user do
     get 'login' => 'devise/sessions#new', :as => :new_user_login
     post 'login' => 'devise/sessions#create', :as => :user_login
     get 'signup' => 'devise/registrations#new', :as => :user_signup
-    delete 'logout' => 'devise/sessions#destroy', :as => :destroy_user_session
+    #delete 'logout' => 'devise/sessions#destroy', :as => :destroy_user_session
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
